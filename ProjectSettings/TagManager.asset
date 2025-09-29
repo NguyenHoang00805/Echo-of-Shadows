@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - FinishLine
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Player
+  - Enemy
+  - PlayerHitbox
+  - EnemyHitbox
+  - GroundDetection
+  - Pickup
+  - DeathZone
+  - Decorations
+  - Background
+  - Light
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 58208381
+    locked: 0
+  - name: Ground
+    uniqueID: 3780841631
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: On screen effects
+    uniqueID: 3998438541
+    locked: 0
+  - name: Light
+    uniqueID: 474797865
+    locked: 0
