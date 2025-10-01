@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 8674272396470519797}
   - component: {fileID: 4109856143964110065}
   - component: {fileID: 963098327135051692}
+  - component: {fileID: 5763598036990886146}
   m_Layer: 8
   m_Name: FlyingEye
   m_TagString: Untagged
@@ -142,7 +143,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 889c6999edf2b8c4ab9752bf3edbbe17, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -230,7 +231,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.34923786, y: -0.13532114}
@@ -313,8 +314,26 @@ MonoBehaviour:
   waypointReachedDistance: 0.1
   biteDetectionZone: {fileID: 1557879641323053944}
   deathCollider: {fileID: 2576984673649925213}
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _hasTarget: 0
+--- !u!114 &5763598036990886146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4650021131585112522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229b8742dc1e1d1419054d5da1f4040f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  knockback: {x: 0, y: 0}
 --- !u!1 &5607366374619366432
 GameObject:
   m_ObjectHideFlags: 0

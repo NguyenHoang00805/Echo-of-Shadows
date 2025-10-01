@@ -192,7 +192,7 @@ AnimationClip:
   m_Events:
   - time: 0.3
     functionName: PlaySlash
-    data: 
+    data: SideR
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

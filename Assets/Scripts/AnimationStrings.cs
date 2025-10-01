@@ -30,4 +30,6 @@ internal class AnimationStrings
     internal static string isSurfacing = "isSurfacing";
     internal static string isBurying = "isBurying";
     internal static string surfaceTrigger = "surfaceTrigger";
+    internal static string buryTrigger = "buryTrigger";
+    internal static string isActive = "isActive";
 }   

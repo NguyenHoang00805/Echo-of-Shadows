@@ -336,7 +336,10 @@ public class PlayerController : MonoBehaviour
                 slashHolder.localRotation = Quaternion.Euler(0, 0, 90);
                 break;
             case "Down":
-                slashHolder.localRotation = Quaternion.Euler(0, 0, -90);
+                slashHolder.localRotation = Quaternion.Euler(0, 180, -90);
+                break;
+            case "SideR":
+                slashHolder.localRotation = Quaternion.Euler(180, 0, 0);
                 break;
             default: // Side
                 slashHolder.localRotation = Quaternion.identity;
@@ -385,12 +388,14 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger(AnimationStrings.isDashing);
         _canDash = false;
         _isDashing = true;
+
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
         trailRenderer.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         trailRenderer.emitting = false;
+
         rb.gravityScale = originalGravity;
         _isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);

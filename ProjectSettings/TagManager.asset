@@ -55,3 +55,6 @@ TagManager:
   - name: Light
     uniqueID: 474797865
     locked: 0
+  - name: New Layer 5
+    uniqueID: 2915251935
+    locked: 0

@@ -13,17 +13,44 @@ public class MossCharger : MonoBehaviour
     SpriteRenderer spriteRenderer;
     PolygonCollider2D polygonCollider2D;
 
-    [SerializeField] float chargeSpeed = 8f;
     [SerializeField] DetectionZone detectionZone;
-    [SerializeField] Transform target;
+    [SerializeField] GameObject AttackZone;
 
     public bool _isCharging;
-    public bool _isBurying;
-    public bool _hasTarget;
-    public bool _isSurfacing;
 
-    private Vector2 OGpos;
+    public Vector3 startPos;
+    public float chargeSpeed = 5f;
+    public float waitBeforeDive = 0.5f;
 
+    private bool _isActive = false;
+    private bool hasSurfaced = false;
+
+    public bool IsCharging
+    {
+        get
+        {
+            return _isCharging;
+        }
+        private set
+        {
+            _isCharging = value;
+            animator.SetBool(AnimationStrings.isCharging, value);
+        }
+    }
+    public bool IsActive //set spriteRenderer + AttackZone = value
+    {
+        get
+        {
+            return _isActive;
+        }
+        private set
+        {
+            _isActive = value;
+            animator.SetBool(AnimationStrings.isActive, value);
+            spriteRenderer.enabled = value;
+            AttackZone.SetActive(value);
+        }
+    }
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,65 +60,37 @@ public class MossCharger : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         polygonCollider2D = GetComponent<PolygonCollider2D>();
         damageable = GetComponent<Damageable>();
-        OGpos = gameObject.transform.position;
+        startPos = transform.position;
+        IsActive = false;
     }
 
     private void Update()
     {
-        HasTarget = detectionZone.detectedColliders.Count > 0;
-        if (HasTarget)
+        if (detectionZone.detectedColliders.Count > 0 && !hasSurfaced)
         {
             animator.SetTrigger(AnimationStrings.surfaceTrigger);
+            IsCharging = true;
+            IsActive = true;
+            hasSurfaced = true;
+        }
+
+        if (detectionZone.detectedColliders.Count == 0)
+        {
+            hasSurfaced = false;
         }
     }
 
     private void FixedUpdate()
     {
-        if (!damageable.LockVelocity)
+        if (IsCharging)
         {
-            if (touchingDirections.IsGrounded && CanMove)
-            {
-                rb.velocity = new Vector2 (chargeSpeed, rb.velocity.y);
-                Debug.Log("Charging!");
-                rb.bodyType = RigidbodyType2D.Dynamic;
-            }
-            else if (touchingDirections.IsGrounded && !CanMove && !isBurying)
-            {
-                Debug.Log("Resetting position!");
-                gameObject.transform.position = OGpos;
-                rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, 0.05f), rb.velocity.y);
-                rb.bodyType = RigidbodyType2D.Kinematic;
-            } else
-            {
-                Debug.Log("Stopped!");
-                rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, 0.05f), rb.velocity.y);
-                rb.bodyType = RigidbodyType2D.Kinematic;
-            }
-        }
-        else
-        {
-            Debug.Log("Velocity is locked!");
+            rb.velocity = new Vector2(chargeSpeed * transform.localScale.x, rb.velocity.y);
         }
     }
-    public bool isBurying
-    {
-        get
-        {
-            return _isBurying;
-        }
-        private set
-        {
-            _isBurying = value;
-            animator.SetBool(AnimationStrings.isBurying, value);
-        }
-    }
+
     public void onCliffDetected()
     {
-        damageable.LockVelocity = true;
-        isBurying = true;
-        rb.velocity = Vector2.zero;
-        rb.angularVelocity = 0f;
-        rb.bodyType = RigidbodyType2D.Kinematic;
+        animator.SetTrigger(AnimationStrings.buryTrigger);
     }
 
     public void onHit(int damage, Vector2 knockback)
@@ -102,31 +101,27 @@ public class MossCharger : MonoBehaviour
 
     public void onPlayerDetected()
     {
-        damageable.LockVelocity = false;
         animator.SetTrigger(AnimationStrings.surfaceTrigger);
+        IsCharging = true;
+        IsActive = true;
+        //animator.SetBool(AnimationStrings.isCharging, true);
     }
-
-    public bool CanMove
+    public void onDiveStart()
     {
-        get
-        {
-            return animator.GetBool(AnimationStrings.canMove);
-        }
+        IsCharging = false;
+        //animator.SetBool(AnimationStrings.isCharging, false);
+        rb.velocity = Vector2.zero;
     }
-
-    public bool HasTarget
+    public void onDiveEnd()
     {
-        get
-        {
-            return _hasTarget;
-        }
-        private set
-        {
-            _hasTarget = value;
-            animator.SetBool(AnimationStrings.hasTarget, value);
-        }
+        transform.position = startPos;
+        IsActive = false;
     }
-
-
+    public void onDeath()
+    {
+        IsCharging = false;
+        rb.velocity = Vector2.zero;
+        AttackZone.SetActive(false);
+    }
 }
 

@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 10
-  knockback: {x: 0, y: 0}
+  knockback: {x: 0, y: 2}
 --- !u!1 &2200685980472322494
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6930176012474024454
 Transform:
   m_ObjectHideFlags: 0
@@ -534,15 +534,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.1107564, y: 0.66843235}
-      - {x: -0.95727587, y: 0.737242}
+    - - {x: 0.57135487, y: 0.23514557}
+      - {x: 0.16783524, y: 0.26888812}
+      - {x: -0.92873716, y: 0.26347518}
       - {x: -0.90178347, y: -0.3452177}
-      - {x: -0.92447233, y: -1.0186076}
-      - {x: 0.7663808, y: -0.96728134}
-      - {x: 1.4691181, y: -0.763361}
-      - {x: 1.7993584, y: -0.35863578}
-      - {x: 1.6389428, y: -0.014712095}
-      - {x: 0.90108156, y: 0.39466947}
+      - {x: -0.8959336, y: -1.5465777}
+      - {x: 0.60941696, y: -1.3668258}
+      - {x: 1.2978857, y: -1.0487499}
+      - {x: 1.7422824, y: -0.75818074}
+      - {x: 1.781639, y: -0.28583288}
+      - {x: 1.2863567, y: 0.052202642}
   m_UseDelaunayMesh: 0
 --- !u!114 &4012016118730288220
 MonoBehaviour:
@@ -1756,8 +1757,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -296528755
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1d38d6ef59f92694b9ffd122fc7fb308, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
