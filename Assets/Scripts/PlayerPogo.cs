@@ -25,7 +25,7 @@ public class PlayerPogo : MonoBehaviour
     {
         float vertical = Input.GetAxisRaw("Vertical");
         bool pressingDown = vertical < -0.5f;
-        bool falling = rb.velocity.y < -0.1f;
+        bool falling = rb.velocity.y < -0.01f;
 
         return pressingDown && falling;
     }

@@ -386,9 +386,9 @@ TextureImporter:
       name: disappear_3
       rect:
         serializedVersion: 2
-        x: 1181
+        x: 1182
         y: 1634
-        width: 391
+        width: 390
         height: 267
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
