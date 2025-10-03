@@ -343,7 +343,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageableHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8674272396470519797}
+        m_TargetAssemblyTypeName: Damageable, Assembly-CSharp
+        m_MethodName: PlaySlashEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   damageableDeath:
     m_PersistentCalls:
       m_Calls:
@@ -364,7 +376,7 @@ MonoBehaviour:
       m_Calls: []
   _maxHealth: 50
   startPos: {x: 0, y: 0}
-  slashEffectPrefab: {fileID: 0}
+  slashEffectPrefab: {fileID: 6897596667958482069, guid: 3056b70b33fdae9439df756b190e4824, type: 3}
   _health: 50
   _isAlive: 1
   isInvincible: 0

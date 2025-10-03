@@ -438,6 +438,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1622307520}
     m_Modifications:
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1530167446}
     - target: {fileID: 4650021131585112522, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
       propertyPath: m_Name
       value: FlyingEye8
@@ -980,6 +988,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1622307520}
     m_Modifications:
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 55623850}
     - target: {fileID: 4650021131585112522, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
       propertyPath: m_Name
       value: FlyingEye11 (1)
@@ -1819,6 +1835,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1622307520}
     m_Modifications:
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1021844715}
     - target: {fileID: 4650021131585112522, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
       propertyPath: m_Name
       value: FlyingEye9
@@ -34891,6 +34915,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1622307520}
     m_Modifications:
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 822256940}
     - target: {fileID: 4650021131585112522, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
       propertyPath: m_Name
       value: FlyingEye10
@@ -35513,6 +35545,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1622307520}
     m_Modifications:
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1089650022}
     - target: {fileID: 4650021131585112522, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
       propertyPath: m_Name
       value: FlyingEye11
@@ -52819,6 +52859,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1622307520}
     m_Modifications:
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 642837697}
     - target: {fileID: 4650021131585112522, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
       propertyPath: m_Name
       value: FlyingEye7
@@ -53324,8 +53372,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
       propertyPath: waypoints.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 963098327135051692, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1300057991}
     - target: {fileID: 4650021131585112522, guid: 0b90c51f767b9a647b4f1be07c85f1bb, type: 3}
       propertyPath: m_Name
       value: FlyingEye6
